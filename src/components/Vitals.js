@@ -16,6 +16,34 @@ class Vitals extends React.Component{
         }
     }
 
+    async componentDidMount() {
+        try {
+          setInterval(async () => {
+            const res = await fetch('http://trier-health.schrocken.io:5000/getTrierJson/5d63920ef89c06dafdcea4e1');
+            const blocks = await res.json();
+             console.log(blocks) //result
+           
+
+            this.setState({
+            sbp: blocks.systolicBloodPressure.value,
+            dbp: blocks.diastolicBloodPressure.value,
+            temp: blocks.temperature.value,
+            pulse: '',
+            rr: '',
+            weight: ''
+            
+            
+           
+
+              
+            })
+          }, 2000);
+        } catch(e) {
+          console.log(e);
+        }
+  }
+
+
 
 //Methods go here
     render(){

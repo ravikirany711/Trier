@@ -15,7 +15,7 @@ class Header extends React.Component{
                    
                </View>
 
-               <View  style={{flexDirection:'row',justifyContent:'space-around',alignItems:'center'}}>
+               <View  style={{flexDirection:'row',justifyContent:'space-around',alignItems:'center',padding:10}}>
 
                    <View >
                    <Text style={{fontSize:18,color:'white',fontWeight:'bold'}}>Site  #256</Text>
