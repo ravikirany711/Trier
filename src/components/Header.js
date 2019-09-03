@@ -15,15 +15,15 @@ class Header extends React.Component{
                    
                </View>
 
-               <View  style={{}}>
+               <View  style={{flexDirection:'row',justifyContent:'space-around',alignItems:'center'}}>
 
-                   <View>
+                   <View >
                    <Text style={{fontSize:18,color:'white',fontWeight:'bold'}}>Site  #256</Text>
                    <Text style={{fontSize:18,color:'white',fontWeight:'bold'}}>Patient  #256-378</Text>
 
                    </View>
 
-                   <View style={{}}>
+                   <View >
                
                    <Text style={{fontSize:18,color:'white',fontWeight:'bold'}}>Protocol #57234</Text>
                     <Text style={{fontSize:18,color:'white',fontWeight:'bold'}}>PI: Michel Margaret</Text>
