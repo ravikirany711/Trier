@@ -28,9 +28,9 @@ class Vitals extends React.Component{
             sbp: blocks.systolicBloodPressure.value,
             dbp: blocks.diastolicBloodPressure.value,
             temp: blocks.temperature.value,
-            pulse: '',
+            pulse: blocks.pulse.value,
             rr: '',
-            weight: ''
+            weight: blocks.weight.value
             
             
            
