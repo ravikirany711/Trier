@@ -16,7 +16,15 @@ class Vitals extends React.Component{
 
         }
     }
+//METHODS CAN GO HERE
 
+
+
+
+
+
+
+//*************************************************************************************/
     async componentDidMount() {
         try {
           setInterval(async () => {
@@ -33,9 +41,9 @@ class Vitals extends React.Component{
             dbp: blocks.diastolicBloodPressure.value,
             temp: blocks.temperature.value,
             pulse: blocks.pulse.value,
-            rr: blocks.respiratoryRate.value,
+            rr: blocks.respiratoryRate.value, //This is not updated in backend
             weight: blocks.weight.value,
-            vbg:'#C3EAFB'
+             vbg:'#C3EAFB'
             
             
            
@@ -85,24 +93,24 @@ class Vitals extends React.Component{
 				<View style={{ flexDirection: 'row',
 				marginTop:0,marginBottom:0,height:25,
 				justifyContent: 'space-around',margin:10}}>
-					<Text style={{borderWidth:1,width:250,paddingLeft:10}}>Diastolic Blood Pressure(mmHG)</Text>
-					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10}}>{this.state.dbp}</Text>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10,backgroundColor:this.state.vbg}}>Diastolic Blood Pressure(mmHG)</Text>
+					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10,backgroundColor:this.state.vbg}}>{this.state.dbp}</Text>
 	
 				</View>
 
 				<View style={{ flexDirection: 'row',
 				marginTop:0,marginBottom:0,height:25,
 				justifyContent: 'space-around',margin:10}}>
-					<Text style={{borderWidth:1,width:250,paddingLeft:10}}>Pulse(beats/Minute)</Text>
-					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10}}>{this.state.pulse}</Text>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10,backgroundColor:this.state.vbg}}>Pulse(beats/Minute)</Text>
+					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10,backgroundColor:this.state.vbg}}>{this.state.pulse}</Text>
 	
 				</View>
 
 				<View style={{ flexDirection: 'row',
 				marginTop:0,marginBottom:0,height:25,
 				justifyContent: 'space-around',margin:10}}>
-					<Text style={{borderWidth:1,width:250,paddingLeft:10}}>Temparature(F,C)</Text>
-					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10}}>{this.state.temp}</Text>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10,backgroundColor:this.state.vbg}}>Temparature(F,C)</Text>
+					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10,backgroundColor:this.state.vbg}}>{this.state.temp}</Text>
 	
 				</View>
 
@@ -117,8 +125,8 @@ class Vitals extends React.Component{
 				<View style={{ flexDirection: 'row',
 				marginTop:0,marginBottom:0,height:25,
 				justifyContent: 'space-around',margin:10}}>
-					<Text style={{borderWidth:1,width:250,paddingLeft:10}}>Weight(kg)</Text>
-					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10}}>{this.state.weight}</Text>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10,backgroundColor:this.state.vbg}}>Weight(kg)</Text>
+					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10,backgroundColor:this.state.vbg}}>{this.state.weight}</Text>
 	
 				</View>
 
@@ -131,4 +139,4 @@ class Vitals extends React.Component{
     }
 }
 
-export default Vitals
+export default Vitals;
