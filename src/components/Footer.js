@@ -3,6 +3,24 @@ import { View, Image, StyleSheet, TouchableOpacity } from 'react-native'
 
 
 class Footer extends React.Component {
+    constructor(props){
+        super(props)
+        this.state={
+            vbc:'#98fb98'
+        }
+    }
+
+//METHODS WILL GO HERE
+ 
+
+
+
+
+
+
+
+
+
     render() {
         return (
             <View style={styles.MainViewStyle}>
@@ -15,7 +33,7 @@ class Footer extends React.Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity OnPress={{ backgroundColor: 'blue' }}>
-                    <View style={{ height: 50, width: 75, backgroundColor: '#98fb98', borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                    <View style={{ height: 50, width: 75, backgroundColor: this.state.vbc, borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
 
 
                         <Image style={{ height: 50, width: 50, borderRadius: 50 }} source={require('../assests/Images/wave-voice-input.png')} />

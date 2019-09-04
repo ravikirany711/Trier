@@ -5,12 +5,13 @@ class Vitals extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            sbp: '',
-            dbp: '',
-            pulse: '',
-            temp: '',
-            rr: '',
-            weight: '',
+            sbp: null,
+            dbp: null,
+            pulse: null,
+            temp: null,
+            rr: null,
+            weight: null,
+            vbg:'white'
 
 
         }
@@ -19,7 +20,10 @@ class Vitals extends React.Component{
     async componentDidMount() {
         try {
           setInterval(async () => {
-            const res = await fetch('http://trier-health.schrocken.io:5000/getTrierJson/5d63920ef89c06dafdcea4e1');
+            const res = await fetch('http://trier-health.schrocken.io:5000/getTrierJson/5d6f7168166007f436944d11')
+            
+            
+            
             const blocks = await res.json();
              console.log(blocks) //result
            
@@ -29,8 +33,9 @@ class Vitals extends React.Component{
             dbp: blocks.diastolicBloodPressure.value,
             temp: blocks.temperature.value,
             pulse: blocks.pulse.value,
-            rr: '',
-            weight: blocks.weight.value
+            rr: blocks.respiratoryRate.value,
+            weight: blocks.weight.value,
+            vbg:'#C3EAFB'
             
             
            
@@ -52,7 +57,7 @@ class Vitals extends React.Component{
             <View>
             <Text style={{ color: 'red', fontSize: 18, alignSelf: 'center', fontWeight: 'bold', padding: 10 }}>VITALS</Text>
             </View>
-            <View style={{  flexDirection: 'column',
+            {/* <View style={{  flexDirection: 'column',
                             justifyContent: 'space-between',
                             marginRight: 10,
                             marginLeft: 10,
@@ -66,7 +71,58 @@ class Vitals extends React.Component{
 
 
 
-            </View>
+            </View> */}
+            {/* The new Views are going here right after this */}
+            <View>
+
+            <View style={{ flexDirection: 'row',
+			marginBottom:0,height:25,
+			justifyContent: 'space-around',margin:10}}>
+				<Text style={{borderWidth:1,width:250,paddingLeft:10,backgroundColor:this.state.vbg}}>Systolic Blood Pressure(mmHG)</Text>
+				<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10,backgroundColor:this.state.vbg}}>{this.state.sbp}</Text>
+
+			</View>
+				<View style={{ flexDirection: 'row',
+				marginTop:0,marginBottom:0,height:25,
+				justifyContent: 'space-around',margin:10}}>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10}}>Diastolic Blood Pressure(mmHG)</Text>
+					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10}}>{this.state.dbp}</Text>
+	
+				</View>
+
+				<View style={{ flexDirection: 'row',
+				marginTop:0,marginBottom:0,height:25,
+				justifyContent: 'space-around',margin:10}}>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10}}>Pulse(beats/Minute)</Text>
+					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10}}>{this.state.pulse}</Text>
+	
+				</View>
+
+				<View style={{ flexDirection: 'row',
+				marginTop:0,marginBottom:0,height:25,
+				justifyContent: 'space-around',margin:10}}>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10}}>Temparature(F,C)</Text>
+					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10}}>{this.state.temp}</Text>
+	
+				</View>
+
+				<View style={{ flexDirection: 'row',
+				marginTop:0,marginBottom:0,height:25,
+				justifyContent: 'space-around',margin:10}}>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10}}>Respiratory Rate(breathes/min)</Text>
+					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10}}>{this.state.rr}</Text>
+	
+				</View>
+
+				<View style={{ flexDirection: 'row',
+				marginTop:0,marginBottom:0,height:25,
+				justifyContent: 'space-around',margin:10}}>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10}}>Weight(kg)</Text>
+					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10}}>{this.state.weight}</Text>
+	
+				</View>
+
+        </View> 
             </View>
 
 
