@@ -30,7 +30,7 @@ class Footer extends React.Component {
 
                 <TouchableOpacity>
                     <View style={{ height: 50, width: 75, backgroundColor: '#19AEEC', borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ height: 25, width: 50, backgroundColor: '#19AEEC' ,borderRadius: 50}} source={require('../assests/Images/previous-icon.png')} />
+                        <Image style={{ height: 25, width: 35 ,borderRadius: 50}} source={require('../assests/Images/previous-icon.png')} />
                     </View>
                 </TouchableOpacity>
 
@@ -38,14 +38,14 @@ class Footer extends React.Component {
                     <View style={{ height: 50, width: 75, backgroundColor: this.state.wbc, borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
 
 
-                        <Image style={{ height: 50, width: 50, borderRadius: 50 }} source={require('../assests/Images/wave-voice-input.png')} />
+                        <Image style={{ height: 50, width: 35, borderRadius: 50 }} source={require('../assests/Images/wave-voice-input.png')} />
                     </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
                     <View style={{ height: 50, width: 75, backgroundColor: '#19AEEC', borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
 
-                        <Image style={{ height: 25, width: 50, backgroundColor: '#19AEEC', borderRadius: 50 }} source={require('../assests/Images/next-icon.png')} />
+                        <Image style={{ height: 25, width: 35, borderRadius: 50 }} source={require('../assests/Images/next-icon.png')} />
                     </View>
                 </TouchableOpacity>
 

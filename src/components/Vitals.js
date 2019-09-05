@@ -18,6 +18,7 @@ class Vitals extends React.Component{
     }
 //METHODS CAN GO HERE
 //Figure out the background of the views in the table with setInterval
+//component did mount is the audio engine ready
 
 
 
@@ -28,7 +29,7 @@ class Vitals extends React.Component{
 
 
 
-//*************************************************************************************/
+//*********************************************************************************************/
     async componentDidMount() {
         try {
           setInterval(async () => {
@@ -47,7 +48,7 @@ class Vitals extends React.Component{
             pulse: blocks.pulse.value,
             rr: blocks.respiratoryRate.value, //This is not updated in backend
             weight: blocks.weight.value,
-            // vbg:'#C3EAFB'
+            vbg:'#C3EAFB'
             
             
            
@@ -130,8 +131,8 @@ class Vitals extends React.Component{
 				<View style={{ flexDirection: 'row',
 				marginTop:0,marginBottom:0,height:25,
 				justifyContent: 'space-around',margin:10}}>
-					<Text style={{borderWidth:1,width:250,paddingLeft:10,paddingTop:2,}}>Respiratory Rate(breathes/min)</Text>
-					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10}}>{this.state.rr}</Text>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10,paddingTop:2,backgroundColor:this.state.vbg}}>Respiratory Rate(breathes/min)</Text>
+					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10,backgroundColor:this.state.vbg}}>{this.state.rr}</Text>
 	
 				</View>
 
