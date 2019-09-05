@@ -6,11 +6,13 @@ class Footer extends React.Component {
     constructor(props){
         super(props)
         this.state={
-            vbc:'#98fb98'
+            wbc:'#98fb98'
         }
     }
 
 //METHODS WILL GO HERE
+
+
  
 
 
@@ -32,8 +34,8 @@ class Footer extends React.Component {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity OnPress={{ backgroundColor: 'blue' }}>
-                    <View style={{ height: 50, width: 75, backgroundColor: this.state.vbc, borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                <TouchableOpacity OnPress={{backgroundColor:'blue'}}>
+                    <View style={{ height: 50, width: 75, backgroundColor: this.state.wbc, borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
 
 
                         <Image style={{ height: 50, width: 50, borderRadius: 50 }} source={require('../assests/Images/wave-voice-input.png')} />

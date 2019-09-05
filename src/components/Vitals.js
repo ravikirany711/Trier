@@ -17,6 +17,10 @@ class Vitals extends React.Component{
         }
     }
 //METHODS CAN GO HERE
+//Figure out the background of the views in the table with setInterval
+
+
+
 
 
 
@@ -43,7 +47,7 @@ class Vitals extends React.Component{
             pulse: blocks.pulse.value,
             rr: blocks.respiratoryRate.value, //This is not updated in backend
             weight: blocks.weight.value,
-             vbg:'#C3EAFB'
+            // vbg:'#C3EAFB'
             
             
            
@@ -51,10 +55,19 @@ class Vitals extends React.Component{
               
             })
           }, 2000);
-        } catch(e) {
+        }
+        
+         catch(e) {
           console.log(e);
         }
+
+        
+        
   }
+
+  
+
+  
 
 
 
@@ -86,14 +99,14 @@ class Vitals extends React.Component{
             <View style={{ flexDirection: 'row',
 			marginBottom:0,height:25,
 			justifyContent: 'space-around',margin:10}}>
-				<Text style={{borderWidth:1,width:250,paddingLeft:10,backgroundColor:this.state.vbg}}>Systolic Blood Pressure(mmHG)</Text>
+				<Text style={{borderWidth:1,width:250,paddingLeft:10,paddingTop:2,backgroundColor:this.state.vbg}}>Systolic Blood Pressure(mmHG)</Text>
 				<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10,backgroundColor:this.state.vbg}}>{this.state.sbp}</Text>
 
 			</View>
 				<View style={{ flexDirection: 'row',
 				marginTop:0,marginBottom:0,height:25,
 				justifyContent: 'space-around',margin:10}}>
-					<Text style={{borderWidth:1,width:250,paddingLeft:10,backgroundColor:this.state.vbg}}>Diastolic Blood Pressure(mmHG)</Text>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10,paddingTop:2,backgroundColor:this.state.vbg}}>Diastolic Blood Pressure(mmHG)</Text>
 					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10,backgroundColor:this.state.vbg}}>{this.state.dbp}</Text>
 	
 				</View>
@@ -101,7 +114,7 @@ class Vitals extends React.Component{
 				<View style={{ flexDirection: 'row',
 				marginTop:0,marginBottom:0,height:25,
 				justifyContent: 'space-around',margin:10}}>
-					<Text style={{borderWidth:1,width:250,paddingLeft:10,backgroundColor:this.state.vbg}}>Pulse(beats/Minute)</Text>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10,paddingTop:2,backgroundColor:this.state.vbg}}>Pulse(beats/Minute)</Text>
 					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10,backgroundColor:this.state.vbg}}>{this.state.pulse}</Text>
 	
 				</View>
@@ -109,7 +122,7 @@ class Vitals extends React.Component{
 				<View style={{ flexDirection: 'row',
 				marginTop:0,marginBottom:0,height:25,
 				justifyContent: 'space-around',margin:10}}>
-					<Text style={{borderWidth:1,width:250,paddingLeft:10,backgroundColor:this.state.vbg}}>Temparature(F,C)</Text>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10,paddingTop:2,backgroundColor:this.state.vbg}}>Temparature(F,C)</Text>
 					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10,backgroundColor:this.state.vbg}}>{this.state.temp}</Text>
 	
 				</View>
@@ -117,7 +130,7 @@ class Vitals extends React.Component{
 				<View style={{ flexDirection: 'row',
 				marginTop:0,marginBottom:0,height:25,
 				justifyContent: 'space-around',margin:10}}>
-					<Text style={{borderWidth:1,width:250,paddingLeft:10}}>Respiratory Rate(breathes/min)</Text>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10,paddingTop:2,}}>Respiratory Rate(breathes/min)</Text>
 					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10}}>{this.state.rr}</Text>
 	
 				</View>
@@ -125,7 +138,7 @@ class Vitals extends React.Component{
 				<View style={{ flexDirection: 'row',
 				marginTop:0,marginBottom:0,height:25,
 				justifyContent: 'space-around',margin:10}}>
-					<Text style={{borderWidth:1,width:250,paddingLeft:10,backgroundColor:this.state.vbg}}>Weight(kg)</Text>
+					<Text style={{borderWidth:1,width:250,paddingLeft:10,paddingTop:2,backgroundColor:this.state.vbg}}>Weight(kg)</Text>
 					<Text style={{borderWidth:1,width:100,paddingLeft:10,marginLeft:10,backgroundColor:this.state.vbg}}>{this.state.weight}</Text>
 	
 				</View>
