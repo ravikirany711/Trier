@@ -6,7 +6,7 @@ class Footer extends React.Component {
     constructor(props){
         super(props)
         this.state={
-            wbc:'#98fb98'
+            wbc:'#98fb98' //voice input background
         }
     }
 
