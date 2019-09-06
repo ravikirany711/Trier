@@ -6,11 +6,45 @@ class Footer extends React.Component {
     constructor(props){
         super(props)
         this.state={
-            wbc:'#98fb98' //voice input background
+            wbc:'#D3D3D3' //voice input background
         }
     }
 
 //METHODS WILL GO HERE
+
+// ***************New method to change view background to green code below***************
+async componentDidMount() {
+    try {
+    setInterval(async () => {
+        const res = await fetch('http://trier-health.schrocken.io:5000/getTrierJson/5d6f7168166007f436944d11')
+        
+        
+        
+        const result = await res.json();
+         console.log(result) //result
+       
+
+        this.setState({
+            wbc:'#98fb98'
+        })
+      }, 2000);
+    }
+    
+     catch(e) {
+      console.log(e);
+    }
+
+    
+    
+}
+
+
+
+
+
+
+// ***************New method to change view background to green code above***************
+
 
 
  

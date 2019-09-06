@@ -29,6 +29,7 @@ class Vitals extends React.Component{
 
 
 
+
 //*********************************************************************************************/
     async componentDidMount() {
         try {
@@ -46,7 +47,7 @@ class Vitals extends React.Component{
             dbp: blocks.diastolicBloodPressure.value,
             temp: blocks.temperature.value,
             pulse: blocks.pulse.value,
-            rr: blocks.respiratoryRate.value, //This is not updated in backend
+            rr: blocks.respiratoryRate.value, 
             weight: blocks.weight.value,
             vbg:'#C3EAFB'
             
